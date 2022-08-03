@@ -1,6 +1,6 @@
-import { IsNotEmpty, IsString } from 'class-validator';
-import { ApiProperty } from '@nestjs/swagger';
-
+import { IsEnum, IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { ApiProperty, ApiPropertyOptional } from '@nestjs/swagger';
+import { Status } from '@common/utils/status';
 
 export class TodoRequestDto{
 
@@ -16,5 +16,11 @@ export class TodoRequestDto{
   @IsString()
   @IsString()
   end_at: Date
+
+  @IsString()
+  @IsOptional()
+  @ApiPropertyOptional({enum: Object.values(Status)})
+  @IsEnum(Status)
+  status: Status
 
 }

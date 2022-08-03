@@ -29,6 +29,9 @@
       ],
       "@common/database/*": [
         "./src/common/database/*"
+      ],
+      "@common/utils/*": [
+        "./src/common/utils/*"
       ]
     }
   }
