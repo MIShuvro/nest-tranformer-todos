@@ -11,10 +11,12 @@ export class TodoRequestDto{
 
   @IsNotEmpty()
   @IsString()
+  @ApiProperty()
   start_at: Date
 
   @IsString()
   @IsString()
+  @ApiProperty()
   end_at: Date
 
   @IsString()
